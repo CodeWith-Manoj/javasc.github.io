@@ -2,326 +2,307 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Northview College | Events</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Started with Webflow</title>
+
+    <!-- ================= CSS ================= -->
     <style>
-  *{
-    font-family: 'Inter', sans-serif;
-  }
-    ul{
-        list-style-type: none;
-        background-color: snow;
-        margin: 0;
-        padding: 0 30px;
-        display: flex;
-        align-items: center;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-    ul li a{
-        display: flex;
-        padding: 20px;
-        text-decoration: none;
-        color: black;
-        font-size: 25px;
-        transform: 0.3s;
-    }
-    .log{
-        display: flex;
-        margin-right: 18px;
-        background-color: #F3F5FF;
-        width: 80px;
-        height:50px;
-        border-radius: 3px;
-    }
-    .push-right{
-             margin-left: auto;
+        body {
+            background: #f4f6f8;
+            color: #333;
+        }
+
+        /* ---------- Header ---------- */
+        header {
+            background: #0b3c5d;
+            color: white;
+            padding: 15px 20px;
+        }
+
+        .header-top {
             display: flex;
-            gap: 15px;  
-    }
-    .free{
-        display: flex;
-        background-color: #4d5bff;
-        width: 200px;
-        height: 50px;
-        border-radius: 3px;
-    }
-    ul li a:hover{
-        background-color: #0093cb;
-        box-shadow: rgba(69, 44, 133, 0.4) 0px 30px 90px;
-        color: aqua;
-        border-radius: 15px;
-    }
-    .free:hover{
-        color: #4C5BFF;
-        background-color: #F3F5FF;
-    }
-    .fst
-    {
-        padding: 13px;font-size: 18px;color: #4C5BFF;
-    }
-    .st{
-        padding: 13px;font-size: 18px;color: white;
-    }
-    .next li{
-    padding: 10px 20px 10px 10px;
-    color: ;
-    font-size: 20px;
-    }
-    .next{
+            justify-content: space-between;
+            align-items: center;
+        }
 
-      margin: 0;
-      padding: 0;
-    }
-    .next li:hover{
-        color: rgb(77, 91, 255,0.7);
-    }
-    .container{
-        display: flex;
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-        gap: 30px;
-        margin: 0;
-        padding: 40px;
-        justify-content: center;
-    }
-    .box1{
-        width: 250px;
-        height: 600px;
-        background-color: #4C5BFF;
-        border-radius: 5px;
-        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    }
-    .box{
-        width: 250px;
-        height: 600px;
-        background-color: #F3F5FF;
-        display: flex;
-        flex-direction: column;
-        border-radius: 5px;
-        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    }
-    .box2{
-        width: 250px;
-        height: 600px;
-        background-color: white; color: black;
-        border-radius: 5px; 
-        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    }
-    .head{
-        display: flex;
-        justify-content: center;
-        font-size: 25px;
-        font-weight: bold;
-        color: white;
-        padding:  70px 70px 5px;
-        margin-bottom: 0; 
-    }
-    .head-b{
-        display: flex;
-        justify-content: center;
-        font-size: 25px;
-        font-weight: bold;
-        color: #4C5BFF;
-        padding:  70px 70px 5px;
-        margin-bottom: 0; 
-    }
-    .price{
-        display: flex;
-        justify-content: center;
-        padding: 10px;        
-        font-size: 70px;
-        color: white;
-    }
-    .price-b{
-        display: flex;
-        justify-content: center;
-        padding: 10px;        
-        font-size: 70px;
-        color: black;
-    }
-    .desc{
-        display: flex;
-        text-align: center;
-        padding: 15px;
-        font-size: 20px;
-        color: rgb(255, 255, 255,0.8);
-    }
-    .desc-b{
-        display: flex;
-        text-align: center;
-        padding: 15px;
-        font-size: 20px;
-        color: rgb(0, 0, 0,0.8);
-    }
-    .bft{
-        display: flex;
-        flex-direction: column;
-        padding: 15px;
-        font-size: 18px;
-        color: rgb(255, 255, 255,0.9);
-        list-style-type: none   ;
-        background-color:#4C5BFF ;
-        margin-bottom: 50px;
-    }
-    .bft hr{
-    width: 100%;
-    border: 1.5px solid rgba(255,255,255,0.5);
-}
-.bft-b{
-        display: flex;
-        flex-direction: column;
-        padding: 15px;
-        font-size: 18px;
-        color: rgb(0, 0, 0,0.9);
-        list-style-type: none   ;
-        background-color:#F3F5FF ;
-        margin-bottom: 40px;
-    }
-    .bft-b hr{
-    width: 100%;
-    border: 1.5px solid rgba(0,0,0,0.5);
-}
-.btn{
-    display: flex;
-    justify-content: center;
-    align-items:center ;
-    background-color: white;
-    color: black;
-    width: 150px;
-    height: 15px;
-    padding: 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin: auto;
-}
-.btn:hover{
-    background-color: black;
-    color: white;
-    border-radius: 15px;
-}
-.btn-1{
-    display: flex;
-    justify-content: center;
-    align-items:center ;
-    background-color: black;
-    color: white;
-    width: 150px;
-    height: 15px;
-    padding: 20px;
-    margin-left: 30px;
-    margin-top: 50px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 80px;
-}
-.btn-1:hover{
-    background-color: rgb(0, 0, 0,0.5);
-    color: black;
-    border-radius: 15px;
-}
-</style>
+        .logo img {
+            width: 40px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .search-bar {
+            margin-top: 15px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .search-bar input,
+        .search-bar select {
+            padding: 8px;
+            border-radius: 4px;
+            border: none;
+        }
+
+        /* ---------- Events Section ---------- */
+        .container {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+
+        .events {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .event-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .event-card h3 {
+            margin-bottom: 10px;
+            color: #0b3c5d;
+        }
+
+        .event-card p {
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .event-card button {
+            margin-top: 10px;
+            padding: 8px 12px;
+            background: #0b3c5d;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .event-card button:hover {
+            background: #092f47;
+        }
+
+        /* ---------- Pagination ---------- */
+        .pagination {
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .pagination button {
+            padding: 8px 12px;
+            margin: 0 5px;
+            border: none;
+            border-radius: 4px;
+            background: #0b3c5d;
+            color: white;
+            cursor: pointer;
+        }
+
+        .pagination button:disabled {
+            background: gray;
+            cursor: not-allowed;
+        }
+
+        /* ---------- Footer ---------- */
+        footer {
+            background: #0b3c5d;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .socials a {
+            color: white;
+            margin: 0 10px;
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+        .socials a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
+
 <body>
-    <ul class="nav">
-        <li style="font-style: italic;"><a href=""><strong>webFlow</strong></a></li>
-        <li><a href="">Products</a></li>
-        <li><a href="">Resources</a></li>
-        <li><a href="">Enterprise</a></li>
-        <li><a href="">Hire an Expert</a></li>
-        <div class="push-right">
-        <li class="log"><a href="" class="fst">Log in</a></li>
-        <li class="free"><a href="" class="st">Get Started - it's free</a></li>
-        </div>  
-    </ul> 
-    <hr> 
-    <ul class="next">
-        <li>Site Plans</li>
-        <li>Workspace plans</li>
-        <li>Need Guidance?</li>
-         <li>WorkFlow Enterprise</li>
-        <li>FAQs</li>
-    </ul>
-    <hr>
-    <div class="container">
-        <div class="box1">
-            <div class="head"">Starter</div>
-            <div class="price">$0</div>
-            <div class="desc">Start Designing,learn Webflow, and publish to webflow.io</div>
-            <ul class="bft" >
-                 <hr>
-                <li>Webflow.io domain</li>
-                <hr>
-                <li>50 CMS items</li>
-                <hr>
-                <li>1 GB bandwidth</li>
-            </ul>
-            <div class="btn" >
-               <h3>Start For Free</h3>
-            </div>
+
+<!-- ================= HEADER ================= -->
+<header>
+    <div class="header-top">
+        <div class="logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/2232/2232688.png" alt="College Logo">
+            <h2>Northview College</h2>
         </div>
-        <div class="box">
-            <div class="head-b"">Basic</div>
-            <div class="price-b">$15</div>
-            <div class="desc-b">Get the essentials to launch a simple site.</div>
-            <ul class="bft-b" >
-                 <hr>
-                <li>Custom domain</li>
-                <hr>
-                <li>0 CMS items</li>
-                <hr>
-                <li>50 GB bandwidth</li>
-            </ul>
-            <div class="btn" >
-               <h3>Add Site</h3>
-            </div>
-        </div>
-        <div class="box">
-            <div class="head-b"">Starter</div>
-            <div class="price-b">$20</div>
-            <div class="desc-b">Start a blog or other content-driven site.</div>
-            <ul class="bft-b" >
-                 <hr>
-                <li>Custom domain</li>
-                <hr>
-                <li>2000 CMS items</li>
-                <hr>
-                <li>200 GB bandwidth</li>
-            </ul>
-            <div class="btn" >
-               <h3>Start For Free</h3>
-            </div>
-        </div>
-        <div class="box">
-            <div class="head-b"">CMS</div>
-            <div class="price-b">$40</div>
-            <div class="desc-b">Build high traffic marketing site.</div>
-            <ul class="bft-b" >
-                 <hr>
-                <li>Custom domain</li>
-                <hr>
-                <li>10,000 CMS items</li>
-                <hr>
-                <li>400 GB bandwidth</li>
-            </ul>
-            <div class="btn" >
-               <h3>Start For Free</h3>
-            </div>
-        </div>
-        <div class="box2">
-            <div class="head-b" style="color: black;">Enterprise</div>
-            <div class="price-b">POC</div>
-            <div class="desc-b">Being enterprise-level security.</div>
-            <ul class="bft-b" style="background-color: white;">
-                 <hr>
-                <li>Custom domain</li>
-                <hr>
-                <li>10,000 CMS items</li>
-                <hr>
-                <li>Custom bandwidth</li>
-            </ul>
-            <div class="btn-1">
-               <h3>Start For Free</h3>
-            </div>
-        </div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Events</a>
+            <a href="#">Admissions</a>
+            <a href="#">Contact</a>
+        </nav>
     </div>
+
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search by title or date (YYYY-MM-DD)">
+        <select id="categoryFilter">
+            <option value="all">All Categories</option>
+            <option value="Sports">Sports</option>
+            <option value="Workshop">Workshop</option>
+            <option value="Lecture">Guest Lecture</option>
+        </select>
+        <select id="dateFilter">
+            <option value="all">All Dates</option>
+            <option value="today">Today</option>
+            <option value="week">This Week</option>
+        </select>
+    </div>
+</header>
+
+<!-- ================= EVENTS ================= -->
+<div class="container">
+    <div id="events" class="events"></div>
+
+    <div class="pagination">
+        <button id="prevBtn">Previous</button>
+        <span id="pageInfo"></span>
+        <button id="nextBtn">Next</button>
+    </div>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <p>📞 +91 98765 43210 | ✉️ info@northviewcollege.edu</p>
+    <div class="socials">
+        <a href="#">LinkedIn</a>
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+    </div>
+</footer>
+
+<!-- ================= JAVASCRIPT ================= -->
+<script>
+    const eventsData = [
+        { title: "Tech Workshop", date: "2026-02-03", description: "Hands-on web development workshop.", category: "Workshop" },
+        { title: "Football Tournament", date: "2026-02-05", description: "Inter-college football event.", category: "Sports" },
+        { title: "AI Guest Lecture", date: "2026-02-06", description: "Talk on Artificial Intelligence.", category: "Lecture" },
+        { title: "Basketball Match", date: "2026-02-08", description: "Friendly basketball match.", category: "Sports" },
+        { title: "Resume Building", date: "2026-02-09", description: "Career guidance workshop.", category: "Workshop" },
+        { title: "Cyber Security Talk", date: "2026-02-10", description: "Guest lecture on cyber threats.", category: "Lecture" }
+    ];
+
+    const eventsContainer = document.getElementById("events");
+    const searchInput = document.getElementById("searchInput");
+    const categoryFilter = document.getElementById("categoryFilter");
+    const dateFilter = document.getElementById("dateFilter");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const pageInfo = document.getElementById("pageInfo");
+
+    let currentPage = 1;
+    const eventsPerPage = 5;
+
+    function filterEvents() {
+        const search = searchInput.value.toLowerCase();
+        const category = categoryFilter.value;
+        const dateType = dateFilter.value;
+        const today = new Date();
+
+        return eventsData.filter(event => {
+            const matchSearch =
+                event.title.toLowerCase().includes(search) ||
+                event.date.includes(search);
+
+            const matchCategory =
+                category === "all" || event.category === category;
+
+            let matchDate = true;
+            const eventDate = new Date(event.date);
+
+            if (dateType === "today") {
+                matchDate = eventDate.toDateString() === today.toDateString();
+            } else if (dateType === "week") {
+                const weekLater = new Date();
+                weekLater.setDate(today.getDate() + 7);
+                matchDate = eventDate >= today && eventDate <= weekLater;
+            }
+
+            return matchSearch && matchCategory && matchDate;
+        });
+    }
+
+    function displayEvents() {
+        const filteredEvents = filterEvents();
+        const start = (currentPage - 1) * eventsPerPage;
+        const paginatedEvents = filteredEvents.slice(start, start + eventsPerPage);
+
+        eventsContainer.innerHTML = "";
+
+        paginatedEvents.forEach(event => {
+            const card = document.createElement("div");
+            card.className = "event-card";
+            card.innerHTML = `
+                <h3>${event.title}</h3>
+                <p><strong>Date:</strong> ${event.date}</p>
+                <p>${event.description}</p>
+                <button>View Details</button>
+            `;
+            eventsContainer.appendChild(card);
+        });
+
+        pageInfo.textContent = `Page ${currentPage} of ${Math.ceil(filteredEvents.length / eventsPerPage)}`;
+        prevBtn.disabled = currentPage === 1;
+        nextBtn.disabled = currentPage === Math.ceil(filteredEvents.length / eventsPerPage);
+    }
+
+    searchInput.addEventListener("input", () => {
+        currentPage = 1;
+        displayEvents();
+    });
+
+    categoryFilter.addEventListener("change", displayEvents);
+    dateFilter.addEventListener("change", displayEvents);
+
+    prevBtn.addEventListener("click", () => {
+        currentPage--;
+        displayEvents();
+    });
+
+    nextBtn.addEventListener("click", () => {
+        currentPage++;
+        displayEvents();
+    });
+
+    displayEvents();
+</script>
+
 </body>
 </html>
